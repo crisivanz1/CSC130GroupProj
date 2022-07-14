@@ -21,19 +21,26 @@ def add_Candy(candyInStock, allowedCandy, allowedCandyListMaxSize):
             print("We have enough of that candy in stock")
         else:
             candyInStock.append(candy)
-            print(candy["Candy Type"] + " added to inventory.")
+            print(candy["Candy Type"] + " " + candy["Flavor"] + " added to inventory.")
             return candyInStock
     return candyInStock
 
-def remove_Candy(candyInStock):
 
-    candyType = input("What type of candy are you trying to remove?: ")
+def remove_last_candy_added(candyInStock):
+    print("Oops!")
+    candyInStock.pop()
+    return show_Inventory(candyInStock)
+
+
+
+def remove_Candy(candyInStock):
+    candyType = input("What type of candy is being removed?: ")
     candyFlavor = input("What flavor of candy is it?: ")
 
     candyToRemove = {"Candy Type": candyType,
-             "Flavor" : candyFlavor}
+                     "Flavor": candyFlavor}
     if candyToRemove not in candyInStock:
-            print("We do not have that candy in stock")
+        print("We do not have that candy in stock")
     else:
         if candyToRemove in candyInStock:
             candyInStock.remove(candyToRemove)
@@ -50,7 +57,11 @@ def show_Inventory(candyInStock):
     print(f'Total number: ', count)
 
 
+def clear_Inventory(candyInStock):
+    candyInStock.clear()
+    print("Inventory cleared")
+    print(f'Amount of candies in stock: ', len(candyInStock))
+
 
 candyInStock = []
 allowedCandy = ["Candy Bar", "Popscicle", "Gummie"]
-print("bruh")
