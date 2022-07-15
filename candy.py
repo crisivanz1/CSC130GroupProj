@@ -11,7 +11,7 @@ def main():
 
     while True:
         selection = input(
-            "\nEnter \n1 - to add candy,: \n2 - to remove last candy from inventory: \n3 - to remove one candy from inventory: \n4 - to list inventory: \n5 - to clear inventory: \n0 - to exit: ")
+            "\nEnter \n1 - to add candy \n2 - to remove last candy from inventory \n3 - to remove one candy from inventory \n4 - to list inventory \n5 - to clear inventory \n0 - to exit:\n")
         if selection == '1':
             candyInStock = add_Candy(candyInStock, allowedCandy, allowedCandyListMaxSize)
         elif selection == '2':
