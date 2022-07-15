@@ -32,7 +32,6 @@ def remove_last_candy_added(candyInStock):
     return show_Inventory(candyInStock)
 
 
-
 def remove_Candy(candyInStock):
     candyType = input("What type of candy is being removed?: ")
     candyFlavor = input("What flavor of candy is it?: ")
@@ -54,7 +53,7 @@ def show_Inventory(candyInStock):
     for candy in candyInStock:
         print(candy)
         count += 1
-    print(f'Total number: ', count)
+    print(f'Total number: ', candyInStock)
 
 
 def clear_Inventory(candyInStock):
