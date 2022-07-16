@@ -4,7 +4,7 @@ from inventory import *
 def main():
     candyInStockArray = [{"Candy Type": "Candy Bar", "Flavor": "Chocolate"},
                          {"Candy Type": "Gummie", "Flavor": "Orange"}]
-    allowedCandyList = ["Candy Bar", "Gummie", "Popsicle"]
+    allowedCandyList = ("Candy Bar", "Gummie", "Popsicle")
     allowedCandyListMaxSize = [{'Candy Type': "Candy Bar", 'Max Amt': 3},
                                {'Candy Type': "Gummie", 'Max Amt': 4},
                                {'Candy Type': "Popsicle", 'Max Amt': 5}]
@@ -18,7 +18,7 @@ def main():
         elif selection == '2':
             candyInStockArray = remove_last_candy_added(candyInStockArray)
         elif selection == '3':
-            candyInStockArray = remove_Candy(remove_Candy(candyInStockArray))
+            candyInStockArray = remove_Candy(candyInStockArray)
         elif selection == '4':
             show_Inventory(candyInStockArray)
         elif selection == '5':

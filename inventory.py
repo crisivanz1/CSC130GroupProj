@@ -46,24 +46,23 @@ def remove_Candy(candyInStock):
             print("Candy removed.")
             return candyInStock
         
-  #def remove_Candy(candyInStock):
-    #removeOne = True
-    #candyType = input("What type of candy is being removed?: ")
-    #candyFlavor = input("What flavor of candy is it?: ")
+def remove_Candy(candyInStock):
+    removeOne = True
+    candyType = input("What type of candy is being removed?: ")
+    candyFlavor = input("What flavor of candy is it?: ")
 
-    #candyToRemove = {"Candy Type": candyType,
-                     "Flavor": candyFlavor}
-    #while removeOne is True:
-    #if candyToRemove not in candyInStock:
-        #print("We do not have that candy in stock")
-        #return candyInStock
-    #else:
-        #for candyToRemove in candyInStock:
-            #candyInStock.remove(candyToRemove)
-            #print("Candy removed.")
-            #break
-        #return candyInStock
-        #removeOne = False
+    candyToRemove = {"Candy Type": candyType, "Flavor": candyFlavor}
+    while removeOne is True:
+        if candyToRemove not in candyInStock:
+            print("We do not have that candy in stock")
+            return candyInStock
+        else:
+            for candyToRemove in candyInStock:
+                candyInStock.remove(candyToRemove)
+                print("Candy removed.")
+                removeOne = False
+                break
+            return candyInStock
 
 
 def show_Inventory(candyInStock):
